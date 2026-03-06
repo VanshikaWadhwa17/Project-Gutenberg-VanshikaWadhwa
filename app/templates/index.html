@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Gutenberg Search</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      max-width: 640px;
+      margin: 4rem auto;
+      padding: 0 1rem;
+      color: #1a1a1a;
+    }
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    p { color: #444; margin-bottom: 1.5rem; }
+    form { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    input[name="query"] {
+      flex: 1;
+      min-width: 200px;
+      padding: 0.6rem 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    button {
+      padding: 0.6rem 1.25rem;
+      background: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button:hover { background: #1d4ed8; }
+    .error { color: #b91c1c; margin-top: 0.5rem; }
+  </style>
+</head>
+<body>
+  <h1>Project Gutenberg Search</h1>
+  <p>Search by metadata (title/author) or full text using TF-IDF and BM25.</p>
+  <form method="post" action="/">
+    <input name="query" type="text" placeholder="Enter search query" value="{{ request.form.query if request.form else '' }}" autofocus>
+    <button type="submit">Search</button>
+  </form>
+  {% if error %}<p class="error">{{ error }}</p>{% endif %}
+</body>
+</html>

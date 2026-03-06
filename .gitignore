@@ -1,0 +1,14 @@
+# --- Data (massive / downloaded) ---
+data/books/*.txt
+data/books/books/
+metadata.csv
+data/metadata.csv
+
+# --- Built index (large binary files) ---
+index/*.pkl
+
+# --- Generated query results (regenerate with run_queries.py) ---
+queries/*.tsv
+
+# --- Python ---
+__pycache__/
