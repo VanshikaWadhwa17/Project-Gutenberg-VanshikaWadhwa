@@ -1,10 +1,9 @@
-# Project Gutenberg Search Engine (Assignment 1)
+# Project Gutenberg Search Engine (Assignment 1)- Vanshika Wadhwa
+Dublin City University, MSc in Computing(AI), A00049233 
 
 A mini search engine for Project Gutenberg books with **indexing**, **three retrieval models** (structured metadata, TF-IDF, BM25), **evaluation**, and a **web interface**.
 
-## What to add locally (not in Git)
-
-These are in `.gitignore` because they are large or downloaded. Add them yourself after cloning:
+## These are in `.gitignore` because they are large or downloaded. Add them yourself after cloning:
 
 | What | Where to get it | Where to put it |
 |------|-----------------|-----------------|
@@ -106,8 +105,3 @@ Open http://127.0.0.1:5000 — search and compare results across the three model
 5. Gutenberg  
 6. Dornröschen  
 
-## Submission
-
-- **Report**: PDF, 5–8 pages, ACM template (sigconf).
-- **Query results**: 18 TSV files in `queries/`.
-- **Code**: Zip of the project (excluding virtualenv and large data if needed).
